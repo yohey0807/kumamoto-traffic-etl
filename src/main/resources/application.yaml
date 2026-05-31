@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kumamoto-traffic-etl
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trafficdb
+    username: trafficuser
+    password: trafficpass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+traffic:
+  csv:
+    import-path: sample-data/traffic_data.csv

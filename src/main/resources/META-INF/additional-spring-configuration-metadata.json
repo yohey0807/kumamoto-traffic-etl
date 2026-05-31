@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "traffic.csv.import-path",
+      "type": "java.lang.String",
+      "description": "Path to the CSV file used for initial traffic data import."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+＜DB作成＞
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ sudo -u postgres psql
+[sudo] yohei のパスワード: 
+psql (14.23 (Ubuntu 14.23-0ubuntu0.22.04.1))
+Type "help" for help.
+
+postgres=# CREATE USER trafficuser WITH PASSWORD 'trafficpass';
+CREATE ROLE
+postgres=# CREATE DATABASE trafficdb OWNER trafficuser;
+CREATE DATABASE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE trafficdb TO trafficuser;
+GRANT
+postgres=# \q
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ psql -h localhost -p 5432 -U trafficuser -d trafficdb
+Password for user trafficuser: 
+psql (14.23 (Ubuntu 14.23-0ubuntu0.22.04.1))
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+trafficdb=> 
+
