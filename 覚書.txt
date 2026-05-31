@@ -19,3 +19,94 @@ Type "help" for help.
 
 trafficdb=> 
 
+＜git＞
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git init
+Initialized empty Git repository in /home/yohei/work/kumamoto-traffic-etl/.git/
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git status
+ブランチ main
+
+No commits yet
+
+追跡されていないファイル:
+  (use "git add <file>..." to include in what will be committed)
+        .gitattributes
+        .gitignore
+        .mvn/
+        README.md
+        docker-compose.yml
+        mvnw
+        mvnw.cmd
+        pom.xml
+        sample-data/
+        src/
+        "\346\210\220\346\236\234\347\211\251\344\270\200\350\246\247.md"
+        "\347\244\276\345\206\205\350\253\226\346\226\207.md"
+        "\350\246\232\346\233\270.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git add .
+warning: LF will be replaced by CRLF in mvnw.cmd.
+The file will have its original line endings in your working directory
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git status
+ブランチ main
+
+No commits yet
+
+コミット予定の変更点:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   .mvn/wrapper/maven-wrapper.properties
+        new file:   README.md
+        new file:   docker-compose.yml
+        new file:   mvnw
+        new file:   mvnw.cmd
+        new file:   pom.xml
+        new file:   sample-data/traffic_data.csv
+        new file:   src/main/java/com/example/traffic/KumamotoTrafficEtlApplication.java
+        new file:   src/main/java/com/example/traffic/config/CsvProperties.java
+        new file:   src/main/java/com/example/traffic/config/DataImportRunner.java
+        new file:   src/main/java/com/example/traffic/controller/TrafficController.java
+        new file:   src/main/java/com/example/traffic/entity/TrafficData.java
+        new file:   src/main/java/com/example/traffic/etl/CsvImportService.java
+        new file:   src/main/java/com/example/traffic/repository/TrafficRepository.java
+        new file:   src/main/resources/META-INF/additional-spring-configuration-metadata.json
+        new file:   src/main/resources/application.yaml
+        new file:   src/test/java/com/example/trafic/KumamotoTrafficEtlApplicationTests.java
+        new file:   "\346\210\220\346\236\234\347\211\251\344\270\200\350\246\247.md"
+        new file:   "\347\244\276\345\206\205\350\253\226\346\226\207.md"
+        new file:   "\350\246\232\346\233\270.txt"
+
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git commit -m "Initial commit"
+[main (root-commit) 67a4639] Initial commit
+ 22 files changed, 1895 insertions(+)
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 .mvn/wrapper/maven-wrapper.properties
+ create mode 100644 README.md
+ create mode 100644 docker-compose.yml
+ create mode 100755 mvnw
+ create mode 100644 mvnw.cmd
+ create mode 100644 pom.xml
+ create mode 100644 sample-data/traffic_data.csv
+ create mode 100644 src/main/java/com/example/traffic/KumamotoTrafficEtlApplication.java
+ create mode 100644 src/main/java/com/example/traffic/config/CsvProperties.java
+ create mode 100644 src/main/java/com/example/traffic/config/DataImportRunner.java
+ create mode 100644 src/main/java/com/example/traffic/controller/TrafficController.java
+ create mode 100644 src/main/java/com/example/traffic/entity/TrafficData.java
+ create mode 100644 src/main/java/com/example/traffic/etl/CsvImportService.java
+ create mode 100644 src/main/java/com/example/traffic/repository/TrafficRepository.java
+ create mode 100644 src/main/resources/META-INF/additional-spring-configuration-metadata.json
+ create mode 100644 src/main/resources/application.yaml
+ create mode 100644 src/test/java/com/example/trafic/KumamotoTrafficEtlApplicationTests.java
+ create mode 100644 "\346\210\220\346\236\234\347\211\251\344\270\200\350\246\247.md"
+ create mode 100644 "\347\244\276\345\206\205\350\253\226\346\226\207.md"
+ create mode 100644 "\350\246\232\346\233\270.txt"
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ 
+
+-----
+git config --global core.quotepath false
+を実行しておくと、日本語で表示されます。
