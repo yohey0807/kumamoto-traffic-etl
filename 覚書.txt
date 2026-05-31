@@ -110,3 +110,22 @@ yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$
 -----
 git config --global core.quotepath false
 を実行しておくと、日本語で表示されます。
+
+＜github＞
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git remote add origin git@github.com:yohey0807/kumamoto-traffic-etl.git
+
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git push -u origin main
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (48/48), 22.65 KiB | 2.26 MiB/s, done.
+Total 48 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:yohey0807/kumamoto-traffic-etl.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+yohei@yohei-ThinkPad-T420s:~/work/kumamoto-traffic-etl$ git remote -v
+origin  git@github.com:yohey0807/kumamoto-traffic-etl.git (fetch)
+origin  git@github.com:yohey0807/kumamoto-traffic-etl.git (push)
